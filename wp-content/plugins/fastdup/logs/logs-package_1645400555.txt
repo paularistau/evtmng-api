@@ -1,0 +1,87 @@
+====  SYSTEM STATS  ====
+Wordpress Version: 5.9
+PHP Version: 7.4.1
+MySQL Version: 8.0.16
+Website Name: apieventmng
+Theme: Api
+Wordpress URL: http://apieventmng.test
+Site URL: http://apieventmng.test
+Multisite: no
+PHP Extensions: ["Core","date","libxml","openssl","pcre","zlib","bcmath","bz2","calendar","ctype","curl","dom","hash","fileinfo","filter","ftp","gd","gettext","SPL","iconv","json","mbstring","session","standard","pcntl","mysqlnd","PDO","pdo_mysql","Phar","posix","Reflection","mysqli","shmop","SimpleXML","soap","sockets","exif","tokenizer","xml","xmlreader","xmlrpc","xmlwriter","xsl","zip","cgi-fcgi","imagick","Zend OPcache","xdebug"]
+Server Info: nginx/1.16.0
+WP Memory Limit: 40M
+WP Admin Memory Limit: 256M
+PHP Memory Limit: 256M
+Max Execution Time: 1200
+Open BaseDir: 
+Wordpress Plugins: {"fastdup\/fastdup.php":{"Name":"FastDup","PluginURI":"https:\/\/ninjateam.gitbook.io\/fastdup\/","Version":"2.1.1","Description":"WordPress Fastest Duplicator and Migration","Author":"Ninja Team","AuthorURI":"https:\/\/ninjateam.org\/","TextDomain":"njt-fastdup","DomainPath":"\/languages","Network":false,"RequiresWP":"","RequiresPHP":"","UpdateURI":"","Title":"FastDup","AuthorName":"Ninja Team"},"jwt-authentication-for-wp-rest-api\/jwt-auth.php":{"Name":"JWT Authentication for WP-API","PluginURI":"https:\/\/enriquechavez.co","Version":"1.2.6","Description":"Extends the WP REST API using JSON Web Tokens Authentication as an authentication method.","Author":"Enrique Chavez","AuthorURI":"https:\/\/enriquechavez.co","TextDomain":"jwt-auth","DomainPath":"\/languages","Network":false,"RequiresWP":"","RequiresPHP":"","UpdateURI":"","Title":"JWT Authentication for WP-API","AuthorName":"Enrique Chavez"}}
+Wordpress Active Plugins: ["fastdup\/fastdup.php","jwt-authentication-for-wp-rest-api\/jwt-auth.php"]
+====  SYSTEM STATS  ====
+
+2022-02-20 23:42:35 [INFO] //========PACKAGE: START========//
+2022-02-20 23:42:35 [INFO] Create Package: ID: 1
+2022-02-20 23:42:35 [INFO] Package Data : {
+    "id": 1,
+    "name": "package",
+    "hash": 1645400555,
+    "name_hash": "package_1645400555",
+    "status": 10,
+    "scan_file": null,
+    "site_url": "http:\/\/apieventmng.test",
+    "template_id": "full_site",
+    "filter_exts": null,
+    "filter_files": null,
+    "filter_dirs": null,
+    "filter_tables": null,
+    "store_path": "\/Users\/paularistau\/Local Sites\/apieventmng\/app\/public\/wp-content\/njt-fastdup\/packages",
+    "store_url": "http:\/\/apieventmng.test\/wp-content\/njt-fastdup\/packages\/",
+    "store_path_temp": "\/Users\/paularistau\/Local Sites\/apieventmng\/app\/public\/wp-content\/njt-fastdup\/tmp",
+    "Archive": {
+        "is_filter": 0,
+        "export_onlydb": false,
+        "filter_exts": [],
+        "filter_dirs": [
+            "\/Users\/paularistau\/Local Sites\/apieventmng\/app\/public\/wp-content\/njt-fastdup"
+        ],
+        "filter_files": [],
+        "read_checks": [],
+        "recursive_links": [],
+        "addon_sites": [],
+        "file": "package_1645400555_archive.zip",
+        "sql_path": null,
+        "zip_archive": null,
+        "zip_path": null,
+        "compress_dir": "\/Users\/paularistau\/Local Sites\/apieventmng\/app\/public",
+        "unreadable_log": [],
+        "dir_exclude_log": [],
+        "recursive_links_log": [],
+        "exts_exclude_log": [],
+        "add_file_error_log": [],
+        "file_exclude_log": []
+    },
+    "Database": {
+        "is_filter": false,
+        "filter_tables": [],
+        "file": "package_1645400555_database.sql",
+        "prefix": "wp_"
+    },
+    "created": "2022-02-20 23:42:35",
+    "njt_fastdup_archive_name": "wp-content\/njt-fastdup",
+    "njt_fastdup_dir_plugin": "wp-content\/plugins"
+}
+2022-02-20 23:42:35 [INFO] //========SCAN PACKAGE JSON: START========//
+2022-02-20 23:42:35 [INFO] //========SCAN PACKAGE JSON: DONE========//
+2022-02-20 23:42:39 [INFO] //========DATABASE: START========//
+2022-02-20 23:42:39 [INFO] //========DATABASE: DONE========//
+2022-02-20 23:42:39 [INFO] //========ARCHIVE: START========//
+2022-02-20 23:42:39 [INFO] File Path: /Users/paularistau/Local Sites/apieventmng/app/public/wp-content/njt-fastdup/tmp/package_1645400555_database.sql
+2022-02-20 23:42:39 [INFO] ZIP database: successfully
+2022-02-20 23:42:39 [INFO] File Path: /Users/paularistau/Local Sites/apieventmng/app/public/wp-content/njt-fastdup/tmp/package_1645400555_scan.json
+2022-02-20 23:42:39 [INFO] ZIP scan_json: successfully
+2022-02-20 23:42:39 [INFO] File Path: /Users/paularistau/Local Sites/apieventmng/app/public/.htaccess
+2022-02-20 23:42:39 [INFO] ZIP htaccess: successfully
+2022-02-20 23:42:39 [INFO] File Path: /Users/paularistau/Local Sites/apieventmng/app/public/wp-config.php
+2022-02-20 23:42:39 [INFO] ZIP wp-config: successfully
+2022-02-20 23:42:39 [INFO] File Path: 
+2022-02-20 23:42:39 [INFO] ZIP robots: Not Found
+2022-02-20 23:42:39 [INFO] -----ZIP Source: Start-----

@@ -1,0 +1,133 @@
+[INFO]-[2022/02/20 23:40:55] Cloning: 1645400455411's clone job's data is not in database, generating data
+[INFO]-[2022/02/20 23:40:55] DB Copy: Creating table wpstg0_commentmeta
+[INFO]-[2022/02/20 23:40:55] DB Copy: Table wp_commentmeta contains 0 rows 
+[INFO]-[2022/02/20 23:40:55] DB Copy: Creating table wpstg0_comments
+[INFO]-[2022/02/20 23:40:55] DB Copy: Table wp_comments contains 1 rows 
+[INFO]-[2022/02/20 23:40:55] DB Copy: Copy data from wp_comments to wpstg0_comments - 0 to 10000 records
+[INFO]-[2022/02/20 23:40:55] DB Copy: Creating table wpstg0_links
+[INFO]-[2022/02/20 23:40:55] DB Copy: Table wp_links contains 0 rows 
+[INFO]-[2022/02/20 23:40:55] DB Copy: Creating table wpstg0_options
+[INFO]-[2022/02/20 23:40:55] DB Copy: Table wp_options contains 169 rows 
+[INFO]-[2022/02/20 23:40:55] DB Copy: Copy data from wp_options to wpstg0_options - 0 to 10000 records
+[INFO]-[2022/02/20 23:40:56] DB Copy: Creating table wpstg0_postmeta
+[INFO]-[2022/02/20 23:40:56] DB Copy: Table wp_postmeta contains 17 rows 
+[INFO]-[2022/02/20 23:40:56] DB Copy: Copy data from wp_postmeta to wpstg0_postmeta - 0 to 10000 records
+[INFO]-[2022/02/20 23:40:56] DB Copy: Creating table wpstg0_posts
+[INFO]-[2022/02/20 23:40:56] DB Copy: Table wp_posts contains 7 rows 
+[INFO]-[2022/02/20 23:40:56] DB Copy: Copy data from wp_posts to wpstg0_posts - 0 to 10000 records
+[INFO]-[2022/02/20 23:40:56] DB Copy: Creating table wpstg0_term_relationships
+[INFO]-[2022/02/20 23:40:56] DB Copy: Table wp_term_relationships contains 1 rows 
+[INFO]-[2022/02/20 23:40:56] DB Copy: Copy data from wp_term_relationships to wpstg0_term_relationships - 0 to 10000 records
+[INFO]-[2022/02/20 23:40:56] DB Copy: Creating table wpstg0_term_taxonomy
+[INFO]-[2022/02/20 23:40:56] DB Copy: Table wp_term_taxonomy contains 1 rows 
+[INFO]-[2022/02/20 23:40:56] DB Copy: Copy data from wp_term_taxonomy to wpstg0_term_taxonomy - 0 to 10000 records
+[INFO]-[2022/02/20 23:40:56] DB Copy: Creating table wpstg0_termmeta
+[INFO]-[2022/02/20 23:40:56] DB Copy: Table wp_termmeta contains 0 rows 
+[INFO]-[2022/02/20 23:40:56] DB Copy: Creating table wpstg0_terms
+[INFO]-[2022/02/20 23:40:56] DB Copy: Table wp_terms contains 1 rows 
+[INFO]-[2022/02/20 23:40:56] DB Copy: Copy data from wp_terms to wpstg0_terms - 0 to 10000 records
+[INFO]-[2022/02/20 23:40:56] DB Copy: Creating table wpstg0_usermeta
+[INFO]-[2022/02/20 23:40:56] DB Copy: Table wp_usermeta contains 148 rows 
+[INFO]-[2022/02/20 23:40:56] DB Copy: Copy data from wp_usermeta to wpstg0_usermeta - 0 to 10000 records
+[INFO]-[2022/02/20 23:40:56] DB Copy: Creating table wpstg0_users
+[INFO]-[2022/02/20 23:40:56] DB Copy: Table wp_users contains 11 rows 
+[INFO]-[2022/02/20 23:40:56] DB Copy: Copy data from wp_users to wpstg0_users - 0 to 10000 records
+[INFO]-[2022/02/20 23:40:56] DB Search & Replace:  Table wpstg0_comments 0 to 20000 records
+[INFO]-[2022/02/20 23:40:56] DB Search & Replace:  Table wpstg0_options 0 to 20000 records
+[INFO]-[2022/02/20 23:40:57] DB Search & Replace:  Table wpstg0_postmeta 0 to 20000 records
+[INFO]-[2022/02/20 23:40:57] DB Search & Replace:  Table wpstg0_posts 0 to 20000 records
+[INFO]-[2022/02/20 23:40:57] DB Search & Replace:  Table wpstg0_term_relationships 0 to 20000 records
+[INFO]-[2022/02/20 23:40:57] DB Search & Replace:  Table wpstg0_term_taxonomy 0 to 20000 records
+[INFO]-[2022/02/20 23:40:57] DB Search & Replace:  Table wpstg0_terms 0 to 20000 records
+[INFO]-[2022/02/20 23:40:57] DB Search & Replace:  Table wpstg0_usermeta 0 to 20000 records
+[INFO]-[2022/02/20 23:40:57] DB Search & Replace:  Table wpstg0_users 0 to 20000 records
+[INFO]-[2022/02/20 23:40:57] Scanning / for its files
+[INFO]-[2022/02/20 23:40:57] Scanning wp-content/plugins and its sub-directories and files
+[INFO]-[2022/02/20 23:40:57] Scanning wp-content/mu-plugins and its sub-directories and files
+[INFO]-[2022/02/20 23:40:57] Scanning wp-content/themes and its sub-directories and files
+[INFO]-[2022/02/20 23:40:57] Scanning wp-content/uploads/ and its sub-directories and files
+[INFO]-[2022/02/20 23:40:58] Scanning wp-content for other directories
+[INFO]-[2022/02/20 23:40:58] Scanning wp-includes for its sub-directories and files
+[INFO]-[2022/02/20 23:40:58] Scanning wp-admin for its sub-directories and files
+[INFO]-[2022/02/20 23:40:58] Copying files...
+[INFO]-[2022/02/20 23:40:58] Total 50 files processed
+[INFO]-[2022/02/20 23:40:58] Total 100 files processed
+[INFO]-[2022/02/20 23:40:58] Total 150 files processed
+[INFO]-[2022/02/20 23:40:58] Total 200 files processed
+[INFO]-[2022/02/20 23:40:58] Total 250 files processed
+[INFO]-[2022/02/20 23:40:58] Total 300 files processed
+[INFO]-[2022/02/20 23:40:58] Total 350 files processed
+[INFO]-[2022/02/20 23:40:58] Total 400 files processed
+[INFO]-[2022/02/20 23:40:59] Total 450 files processed
+[INFO]-[2022/02/20 23:40:59] Total 500 files processed
+[INFO]-[2022/02/20 23:40:59] Total 550 files processed
+[INFO]-[2022/02/20 23:40:59] Total 600 files processed
+[INFO]-[2022/02/20 23:40:59] Total 650 files processed
+[INFO]-[2022/02/20 23:40:59] Total 700 files processed
+[INFO]-[2022/02/20 23:40:59] Total 750 files processed
+[INFO]-[2022/02/20 23:40:59] Total 800 files processed
+[INFO]-[2022/02/20 23:40:59] Total 850 files processed
+[INFO]-[2022/02/20 23:40:59] Total 900 files processed
+[INFO]-[2022/02/20 23:40:59] Total 950 files processed
+[INFO]-[2022/02/20 23:40:59] Total 1000 files processed
+[INFO]-[2022/02/20 23:41:00] Total 1050 files processed
+[INFO]-[2022/02/20 23:41:00] Total 1100 files processed
+[INFO]-[2022/02/20 23:41:00] Total 1150 files processed
+[INFO]-[2022/02/20 23:41:00] Total 1200 files processed
+[INFO]-[2022/02/20 23:41:00] Total 1250 files processed
+[INFO]-[2022/02/20 23:41:00] Total 1300 files processed
+[INFO]-[2022/02/20 23:41:00] Total 1350 files processed
+[INFO]-[2022/02/20 23:41:00] Total 1400 files processed
+[INFO]-[2022/02/20 23:41:00] Total 1450 files processed
+[INFO]-[2022/02/20 23:41:00] Total 1500 files processed
+[INFO]-[2022/02/20 23:41:00] Total 1550 files processed
+[INFO]-[2022/02/20 23:41:01] Total 1600 files processed
+[INFO]-[2022/02/20 23:41:01] Total 1650 files processed
+[INFO]-[2022/02/20 23:41:01] Total 1700 files processed
+[INFO]-[2022/02/20 23:41:01] Total 1750 files processed
+[INFO]-[2022/02/20 23:41:01] Total 1800 files processed
+[INFO]-[2022/02/20 23:41:01] Total 1850 files processed
+[INFO]-[2022/02/20 23:41:01] Total 1900 files processed
+[INFO]-[2022/02/20 23:41:01] Total 1950 files processed
+[INFO]-[2022/02/20 23:41:01] Total 2000 files processed
+[INFO]-[2022/02/20 23:41:01] Total 2050 files processed
+[INFO]-[2022/02/20 23:41:01] Total 2100 files processed
+[INFO]-[2022/02/20 23:41:02] Total 2150 files processed
+[INFO]-[2022/02/20 23:41:02] Total 2200 files processed
+[INFO]-[2022/02/20 23:41:02] Total 2250 files processed
+[INFO]-[2022/02/20 23:41:02] Total 2300 files processed
+[INFO]-[2022/02/20 23:41:02] Total 2350 files processed
+[INFO]-[2022/02/20 23:41:02] Total 2400 files processed
+[INFO]-[2022/02/20 23:41:02] Total 2450 files processed
+[INFO]-[2022/02/20 23:41:02] Total 2500 files processed
+[INFO]-[2022/02/20 23:41:02] Total 2550 files processed
+[INFO]-[2022/02/20 23:41:02] Total 2600 files processed
+[INFO]-[2022/02/20 23:41:02] Total 2650 files processed
+[INFO]-[2022/02/20 23:41:02] Total 2700 files processed
+[INFO]-[2022/02/20 23:41:03] Total 2750 files processed
+[INFO]-[2022/02/20 23:41:03] Total 2800 files processed
+[INFO]-[2022/02/20 23:41:03] Total 2850 files processed
+[INFO]-[2022/02/20 23:41:03] Skipped symlinking Wp Uploads Folder
+[INFO]-[2022/02/20 23:41:03] Copying files finished
+[INFO]-[2022/02/20 23:41:03] DB Data Step 0: Copy wp-config.php file
+[INFO]-[2022/02/20 23:41:03] DB Data Step 0: Skipping: wp-config.php already exists in /Users/paularistau/Local Sites/apieventmng/app/public/1645400455411/wp-config.php
+[INFO]-[2022/02/20 23:41:03] DB Data Step 1: Updating siteurl and homeurl in wpstg0_options to http://apieventmng.test/1645400455411
+[INFO]-[2022/02/20 23:41:03] DB Data Step 3: Updating db prefix in wpstg0_usermeta.
+[INFO]-[2022/02/20 23:41:03] DB Data Step 4: Updating table_prefix in /Users/paularistau/Local Sites/apieventmng/app/public/1645400455411/wp-config.php to wpstg0_
+[INFO]-[2022/02/20 23:41:03] DB Data Step 5: WP installation is not in a subdirectory! Skipping this step
+[INFO]-[2022/02/20 23:41:03] DB Data Step 6: Updating db prefix in wpstg0_options.
+[INFO]-[2022/02/20 23:41:03] DB Data Step 7: Updating constants in wp-config.php
+[INFO]-[2022/02/20 23:41:03] DB Data Step 7: Added:UPLOADS
+[INFO]-[2022/02/20 23:41:03] DB Data Step 7: Added:WP_PLUGIN_DIR
+[INFO]-[2022/02/20 23:41:03] DB Data Step 7: Added:WP_PLUGIN_URL
+[INFO]-[2022/02/20 23:41:03] DB Data Step 7: Added:WP_LANG_DIR
+[INFO]-[2022/02/20 23:41:03] DB Data Step 7: Added:WP_HOME
+[INFO]-[2022/02/20 23:41:03] DB Data Step 7: Added:WP_SITEURL
+[INFO]-[2022/02/20 23:41:03] DB Data Step 7: Added:WP_CACHE
+[INFO]-[2022/02/20 23:41:03] DB Data Step 7: Added:WP_ENVIRONMENT_TYPE
+[INFO]-[2022/02/20 23:41:03] DB Data Step 7: Skipping: WP_ALLOW_MULTISITE not defined in wp-config.php.
+[INFO]-[2022/02/20 23:41:03] DB Data Step 7: Skipping: MULTISITE not defined in wp-config.php.
+[INFO]-[2022/02/20 23:41:03] Finish: Deleting clone job's cache files...
+[INFO]-[2022/02/20 23:41:03] Finish: Clone job's cache files have been deleted!
+[INFO]-[2022/02/20 23:41:03] Finish: Verifying existing clones...
+[INFO]-[2022/02/20 23:41:03] Finish: The job finished!
