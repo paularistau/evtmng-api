@@ -1,144 +1,83 @@
 <?php
 
-function event_scheme($slug) {
-  $post_id = get_event_id_by_slug($slug);
-  if($post_id) {
-    $post_meta = get_post_meta($post_id);
+function event_data($post) {
+  $post_meta = get_post_meta($post->ID);
+  $post_status = get_post_meta($post->post_status);
+  $src = wp_get_attachment_image_src($post_meta['img'][0], 'large')[0];
+  $user = get_userdata($post->post_author);
 
-    $images = get_attached_media('image', $post_id);
-    $images_array = null;
-
-    if($images) {
-      $images_array = array();
-      foreach($images as $key => $value) {
-        $images_array[] = array(
-          'titulo' => $value->post_name,
-          'src' => $value->guid,
-        );
-      }
-    }
-
-    $response = array(
-      "id" => $slug, 
-      "pictures" => $images_array,
-      "name" => $post_meta['name'][0],
-      "type" => $post_meta['type'][0],
-      "description" => $post_meta['description'][0],
-      "start_date" => $post_meta['start_date'][0],
-      "end_date" => $post_meta['end_date'][0],
-      'status' => $status,
-      "user_id" => $post_meta['user_id'][0],
-    );
-
-  } else {
-    $response = new WP_Error('notexist', 'Product not found.', array('status' => 404));
-  }
-  return $response;
+  return [
+    'id' => $post->ID,
+    'author' => $user->user_login,
+    "name" => $post_meta['name'][0],
+    'src' => $src,
+    "type" => $post_meta['type'][0],
+    "description" => $post_meta['description'][0],
+    "start_date" => $post_meta['start_date'][0],
+    "end_date" => $post_meta['end_date'][0],
+    "status" => $post_meta['status'][0],
+  ];
 }
 
 function api_event_get($request) {
-  $response = event_scheme($request["slug"]);
+  $post_id = $request['id'];
+  $post = get_post($post_id);
+
+  if (!isset($post) || empty($post_id)) {
+    $response = new WP_Error('error', 'Event not found.', ['status' => 404]);
+    return rest_ensure_response($response);
+  }
+
+
+  $event = event_data($post);
+
+  $response = [
+    'event' => $event,
+  ];
+
   return rest_ensure_response($response);
 }
 
 function register_api_event_get() {
-  register_rest_route('api', '/event/(?P<slug>[-\w]+)', array(
-    array(
-      'methods' => WP_REST_Server::READABLE,
-      'callback' => 'api_event_get',
-    ),
-  ));
+  register_rest_route('api', '/event/(?P<id>[0-9]+)', [
+    'methods' => WP_REST_Server::READABLE,
+    'callback' => 'api_event_get',
+  ]);
 }
 add_action('rest_api_init', 'register_api_event_get');
 
-// API events
-function api_events_get_user($request) {
-
-  $q = sanitize_text_field($request['q']) ?: '';
-  $_page = sanitize_text_field($request['_page']) ?: 0;
-  $_limit = sanitize_text_field($request['_limit']) ?: 9;
-  $user_id = sanitize_text_field($request['user_id']);
-
-  $user_id_query = null;
-  if($user_id) {
-    $user_id_query = array(
-      'key' => 'user_id',
-      'value' => $user_id,
-      'compare' => '='
-    );
-  }
-
-  $query = array(
-    'post_type' => 'event',
-    'posts_per_page' => $_limit,
-    'paged' => $_page,
-    's' => $q,
-    'meta_query' => array(
-      $user_id_query,
-    )
-  );
-
-  $loop = new WP_Query($query);
-  $posts = $loop->posts;
-  $total = $loop->found_posts;
-
-  $events = array();
-  foreach ($posts as $key => $value) {
-    $events[] = event_scheme($value->post_name);
-  }
-
-  $response = rest_ensure_response($events);
-
-  return $response;
-}
-
 function api_events_get($request) {
+  $_user = sanitize_text_field($request['_user']) ?: 0;
 
-  $q = sanitize_text_field($request['q']) ?: '';
-  $_page = sanitize_text_field($request['_page']) ?: 0;
-  $_limit = sanitize_text_field($request['_limit']) ?: 9;
-
-  $query = array(
-    'post_type' => 'event',
-    'posts_per_page' => $_limit,
-    'paged' => $_page,
-    's' => $q,
-  );
-
-  $loop = new WP_Query($query);
-  $posts = $loop->posts;
-  $total = $loop->found_posts;
-
-  $events = array();
-  foreach ($posts as $key => $value) {
-    $events[] = event_scheme($value->post_name);
+  if (!is_numeric($_user)) {
+    $user = get_user_by('login', $_user);
+    $_user = $user->ID;
   }
 
-  $response = rest_ensure_response($events);
+  $args = [
+    'post_type' => 'event',
+    'author' => $_user,
+  ];
 
-  return $response;
-}
+  $query = new WP_Query($args);
+  $posts = $query->posts;
 
-function register_api_events_get_user() {
-  register_rest_route('api', '/event', array(
-    array(
-      'methods' => WP_REST_Server::READABLE,
-      'callback' => 'api_events_get_user',
-    ),
-  ));
+  $events = [];
+  if ($posts) {
+    foreach ($posts as $post) {
+      $events[] = event_data($post);
+    }
+  }
+
+  return rest_ensure_response($events);
 }
 
 function register_api_events_get() {
-  register_rest_route('api', '/event', array(
-    array(
-      'methods' => WP_REST_Server::READABLE,
-      'callback' => 'api_events_get',
-    ),
-  ));
+  register_rest_route('api', '/event', [
+    'methods' => WP_REST_Server::READABLE,
+    'callback' => 'api_events_get',
+  ]);
 }
-
-add_action('rest_api_init', 'register_api_events_get_user');
 add_action('rest_api_init', 'register_api_events_get');
-
 
 ?>

@@ -1,5 +1,5 @@
 <?php
-function register_cpt_event() {
+function registrar_cpt_event() {
   register_post_type('event', array(
     'label' => 'Event',
     'description' => 'Event',
@@ -12,6 +12,6 @@ function register_cpt_event() {
     'publicly_queryable' => true
   ));
 }
-add_action('init', 'register_cpt_event');
+add_action('init', 'registrar_cpt_event');
 
 ?>

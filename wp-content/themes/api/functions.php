@@ -1,34 +1,26 @@
 <?php
 
-$dirbase = get_template_directory();
+$template_diretorio = get_template_directory();
 
-require_once($dirbase . "/custom-post-type/event.php");
-require_once($dirbase . "/custom-post-type/my_events.php");
+require_once($template_diretorio . "/custom-post-type/event.php");
+require_once($template_diretorio . "/custom-post-type/subscribe.php");
 
-require_once($dirbase . "/endpoints/user_post.php");
-require_once($dirbase . "/endpoints/user_get.php");
-require_once($dirbase . "/endpoints/user_put.php");
+require_once($template_diretorio . "/endpoints/user_post.php");
+require_once($template_diretorio . "/endpoints/user_get.php");
+require_once($template_diretorio . "/endpoints/user_put.php");
 
-require_once($dirbase . "/endpoints/event_post.php");
-require_once($dirbase . "/endpoints/event_get.php");
-require_once($dirbase . "/endpoints/event_delete.php");
+require_once($template_diretorio . "/endpoints/event_post.php");
+require_once($template_diretorio . "/endpoints/event_get.php");
+require_once($template_diretorio . "/endpoints/event_delete.php");
+
+require_once($template_diretorio . "/endpoints/subscribe_post.php");
+require_once($template_diretorio . "/endpoints/subscribe_get.php");
+require_once($template_diretorio . "/endpoints/subscribe_delete.php");
 
 function get_event_id_by_slug($slug) {
   $query = new WP_Query(array(
     'name' => $slug,
     'post_type' => 'event',
-    'numberposts' => 1,
-    'fields' => 'ids'
-  ));
-  $posts = $query->get_posts();
-  return array_shift($posts);
-}
-
-
-function get_event_type_id_by_slug($slug) {
-  $query = new WP_Query(array(
-    'name' => $slug,
-    'post_type' => 'event_type',
     'numberposts' => 1,
     'fields' => 'ids'
   ));

@@ -1,41 +1,25 @@
 <?php
 
 function api_event_delete($request) {
-  $slug = $request['slug'];
-
-  $event_id = get_event_id_by_slug($slug);
+  $post_id = $request['id'];
   $user = wp_get_current_user();
-
-  $author_id = (int) get_post_field('event_author', $event_id);
+  $post = get_post($post_id);
+  $author_id = (int) $post->post_author;
   $user_id = (int) $user->ID;
 
-  if($user_id === $author_id) {
+  $attachment_id = get_post_meta($post_id, 'img', true);
+  wp_delete_attachment($attachment_id, true);
+  wp_delete_post($post_id, true);
 
-    $images = get_attached_media('image', $event_id);
-    if($images) {
-      foreach($images as $key => $value) {
-        wp_delete_attachment($value->ID, true);
-      }
-    }
-
-    $response = wp_delete_post($event_id, true);
-
-  } else {
-    $response = new WP_Error('permission', 'User unauthorized.', array('status' => 401));
-  }
-  return rest_ensure_response($response);
+  return rest_ensure_response('Event deleted.');
 }
 
 function register_api_event_delete() {
-  register_rest_route('api', '/event/(?P<slug>[-\w]+)', array(
-    array(
-      'methods' => WP_REST_Server::DELETABLE,
-      'callback' => 'api_event_delete',
-    ),
-  ));
+  register_rest_route('api', '/event/(?P<id>[0-9]+)', [
+    'methods' => WP_REST_Server::DELETABLE,
+    'callback' => 'api_event_delete',
+  ]);
 }
-
 add_action('rest_api_init', 'register_api_event_delete');
-
 
 ?>
